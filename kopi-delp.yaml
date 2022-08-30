@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kopi-depl
+  labels:
+    app: kopi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kopi
+  template:
+    metadata:
+      labels:
+        app: kopi
+    spec:
+      containers:
+      - name: kopi
+        image: nagalapar/kopi:v1
+        ports:
+        - containerPort: 80
