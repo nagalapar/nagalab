@@ -54,7 +54,7 @@ sudo kubeadm init --control-plane-endpoint=master0.nglp.tech --pod-network-cidr=
 kubeadm token create --print-join-command
 
 #insert join token here, this is an example
-kubeadm join master0.nglp.tech:6443 --token 0nrs2p.takd4ncu97q2yl1g --discovery-token-ca-cert-hash sha256:98d4da9e679443607b915866af95a2a89f5efd3de03096310275fd5d79070a06
+kubeadm join master0.nglp.tech:6443 --token <token> --discovery-token-ca-cert-hash sha256:<token>
 
 #copy login admin.conf
 mkdir -p $HOME/.kube
